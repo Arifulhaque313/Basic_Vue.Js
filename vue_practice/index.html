@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Practice</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id="app">
+        <h3>{{ title }} -- {{age}}</h3>
+       <button v-on:click="age++">Increase</button>
+       <button @click="age--">Decrease</button>
+       <button @click="changeTitle('hello')">Change Title</button>
+    
+        <hr>
+        
+        <h3 v-if="show">{{title}}</h3>
+       <button @click="toggle">{{ show ? 'show':'hide' }}</button>
+
+       <hr>
+
+       <h3 v-for="items in book">{{items.author}}</h3>
+
+    </div>
+    
+
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <style>
+        .btn{
+            width: 100px;
+            padding: 30px 30px;
+            background-color: blueviolet;
+            color: white;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        ul{
+            display: flex;
+        }
+
+        li{
+            width: 200px;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            list-style-type: none;
+        }
+        .fav{
+            background-color: blue;
+            border-radius: 10px;
+            color: white;
+        }
+    </style>
+    <div id="app">
+
+         <h3 >Total cars{{countCar}}</h3>
+         <h3>Total fav class: {{favcount}}</h3>
+
+        <ul class="ul">
+            <li @click="changeClass(car)" v-for="car in cars" :class="{fav:car.class}">
+                <h1>{{car.name}}</h1>
+                <p>{{car.model}}</p>
+            </li>
+        </ul>
+        
+    </div>
+
+    
+    
+
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
